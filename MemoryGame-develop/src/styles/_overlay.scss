@@ -1,0 +1,236 @@
+.overlay-text {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    color: $font-color;
+    font-family: $font-family, serif;
+
+    &__btn {
+        font-size: 2.2rem;
+        color: $font-color;
+        cursor: pointer;
+        margin-top: 10px;
+        background-color: transparent;
+        border: none;
+    }
+
+    &__last {
+        font-size: 3.5rem;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 400px;
+        height: 300px;
+    }
+
+    &__nickname {
+        width: 100%;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        font-size: 2rem;
+        color: $font-color;
+        outline: none;
+    }
+
+
+
+    &__name {
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        -webkit-transition: all 0.3 ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    &__nickname:focus, &__nickname:valid{
+        + .overlay-text__label .overlay-text__name{
+            transform: translateY(-150%);
+            font-size: 1.5rem;
+            color: #8a00ff;
+        }
+    }
+
+    &__form-wraper {
+        position: relative;
+        margin-bottom: 10px;
+        height: 80px;
+    }
+
+    &__label {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        font-size: 2rem;
+        border-bottom: 1px solid $background-card-color;
+
+    }
+
+}
+
+.overlay-text--visible {
+    display: flex;
+    animation: overlay-grow .5s forwards;
+}
+
+.score-list {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 5px 0;
+    width: 420px;
+    height: 550px;
+    list-style: none;
+    background-color: $background-color;
+    padding: 0;
+
+    &__item {
+        height: 10%;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2px;
+
+        &--podium {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            height: 40%;
+            margin-top: 0;
+            background-color: #001eff;
+            border-bottom: 2px solid #da00ff;
+        }
+    }
+
+    &__place {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+        height: 80%;
+        flex-grow: 1;
+        font-size: 1.3rem;
+
+        &--first {
+            order: 1;
+            align-self: flex-start;
+            margin: 5px 0 0 0;
+        }
+
+        &--second {
+            order: 0;
+        }
+
+        &--third {
+            order: 2;
+        }
+    }
+
+    &__points {
+        margin-top: 3px;
+        font-size: 1.1rem;
+    }
+
+    &__nick {
+        margin-top: 10px;
+    }
+}
+
+
+
+.img__place {
+    width: 90px;
+    height: 100px;
+}
+
+.back-to-game-btn {
+    color: $font-color;
+    cursor: pointer;
+    font-size: 60px;
+    background-color: transparent;
+    border: none;
+}
+
+@media(max-height: 700px){
+    .score-list{
+        height: 450px;
+        &__item{
+            font-size: 1rem;
+        }
+        &__place{
+            font-size: 1rem;
+        }
+        &__points{
+            font-size: 0.9rem;
+        }
+    }
+    .img__place{
+        width: 60px;
+        height: 80px;
+    }
+
+    .back-to-game-btn{
+        font-size: 3rem;
+    }
+}
+
+@media(max-width: 400px){
+    .score-list{
+        width: 350px;
+        &__item {
+            font-size: 1rem;
+        }
+
+        &__place {
+            font-size: 1rem;
+        }
+
+        &__points {
+            font-size: 0.9rem;
+        }
+    }
+
+    .img__place {
+        width: 70px;
+        height: 90px;
+    }
+    .back-to-game-btn {
+        font-size: 3rem;
+    }
+
+    .overlay-text__last{
+        font-size: 3rem;
+    }
+
+    .overlay-text__form {
+        width: 300px;
+    }
+}
+
+@keyframes overlay-grow {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+        font-size: 0;
+    }
+
+    to {
+        background-color: rgba(0, 0, 0, .8);
+        font-size: 4.4rem;
+    }
+}

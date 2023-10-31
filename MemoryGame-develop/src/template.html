@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title><%= htmlWebpackPlugin.options.title %></title>
+
+</head>
+
+<body>
+    <header class="header">
+      <h1 class="header__title">Memory Game</h1>
+      <div class="game-options">
+        <span class="btn btn--score">
+          <img src="./images/podium.svg" alt="podium" class="btn__img btn__img--score">
+        </span>
+        <span class="btn btn--audio btn--audio-on">
+          <img src="./images/mute.svg" alt="audio" class="btn__img btn__img--audio">
+        </span>
+      </div>
+      <div class="header__game-info">
+        <div class="game-info">
+        Tempo  <span class="game-info__time"></span>
+        </div>
+        <div class="game-info">
+        Tentativas  <span class="game-info__flips"></span>
+        </div>
+      </div>
+    </header>
+    <div class="game__container">
+      <div class="card">
+        <div class="card__side card__side--front">
+          <img src="./images/brain.svg" alt="front-card-brain" class="card__img">
+        </div>
+        <div class="card__side card__side--back">
+          <img src="./images/chess.svg" alt="back-card-chess" class="card__img card__img--back">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__side card__side--front">
+          <img src="./images/brain.svg" alt="front-card-brain" class="card__img">
+        </div>
+        <div class="card__side card__side--back">
+          <img src="./images/chess.svg" alt="back-card-chess" class="card__img card__img--back">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__side card__side--front">
+          <img src="./images/brain.svg" alt="front-card-brain" class="card__img">
+        </div>
+        <div class="card__side card__side--back">
+          <img src="./images/heart.svg" alt="back-card-heart" class="card__img card__img--back">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__side card__side--front">
+          <img src="./images/brain.svg" alt="front-card-brain" class="card__img">
+        </div>
+        <div class="card__side card__side--back">
+          <img src="./images/heart.svg" alt="back-card-heart" class="card__img card__img--back">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__side card__side--front">
+          <img src="./images/brain.svg" alt="front-card-brain" class="card__img">
+        </div>
+        <div class="card__side card__side--back">
+          <img src="./images/mushroom.svg" alt="back-card-mushroom" class="card__img card__img--back">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__side card__side--front">
+          <img src="./images/brain.svg" alt="front-card-brain" class="card__img">
+        </div>
+        <div class="card__side card__side--back">
+          <img src="./images/mushroom.svg" alt="back-card-mushroom" class="card__img card__img--back">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__side card__side--front">
+          <img src="./images/brain.svg" alt="front-card-brain" class="card__img">
+        </div>
+        <div class="card__side card__side--back">
+          <img src="./images/pacman.svg" alt="back-card-pacman" class="card__img card__img--back">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__side card__side--front">
+          <img src="./images/brain.svg" alt="front-card-brain" class="card__img">
+        </div>
+        <div class="card__side card__side--back">
+          <img src="./images/pacman.svg" alt="back-card-pacman" class="card__img card__img--back">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__side card__side--front">
+          <img src="./images/brain.svg" alt="front-card-brain" class="card__img">
+        </div>
+        <div class="card__side card__side--back">
+          <img src="./images/snake.svg" alt="back-card-snake" class="card__img card__img--back">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__side card__side--front">
+          <img src="./images/brain.svg" alt="front-card-brain" class="card__img">
+        </div>
+        <div class="card__side card__side--back">
+          <img src="./images/snake.svg" alt="back-card-snake" class="card__img card__img--back">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__side card__side--front">
+          <img src="./images/brain.svg" alt="front-card-brain" class="card__img">
+        </div>
+        <div class="card__side card__side--back">
+          <img src="./images/spaceship.svg" alt="back-card-spaceship" class="card__img card__img--back">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__side card__side--front">
+          <img src="./images/brain.svg" alt="front-card-brain" class="card__img">
+        </div>
+        <div class="card__side card__side--back">
+          <img src="./images/spaceship.svg" alt="back-card-spaceship" class="card__img card__img--back">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__side card__side--front">
+          <img src="./images/brain.svg" alt="front-card-brain" class="card__img">
+        </div>
+        <div class="card__side card__side--back">
+          <img src="./images/sword.svg" alt="back-card-sword" class="card__img card__img--back">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__side card__side--front">
+          <img src="./images/brain.svg" alt="front-card-brain" class="card__img">
+        </div>
+        <div class="card__side card__side--back">
+          <img src="./images/sword.svg" alt="back-card-sword" class="card__img card__img--back">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__side card__side--front">
+          <img src="./images/brain.svg" alt="front-card-brain" class="card__img">
+        </div>
+        <div class="card__side card__side--back">
+          <img src="./images/videogames.svg" alt="back-card-videogames" class="card__img card__img--back">
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__side card__side--front">
+          <img src="./images/brain.svg" alt="front-card-brain" class="card__img">
+        </div>
+        <div class="card__side card__side--back">
+          <img src="./images/videogames.svg" alt="back-card-videogames" class="card__img card__img--back">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="overlay-text overlay-text--visible">
+    <form action="" class="overlay-text__form">
+    <div class="overlay-text__form-wraper">
+    <input type="text" class="overlay-text__nickname" id="nickname" required autocomplete="off">
+    <label for="name" class="overlay-text__label">
+      <span class="overlay-text__name">E-mail</span>
+    </label>
+    </div>
+    <button class="overlay-text__btn">Start</button>
+    </form>
+  </div>
+  <div id="game-over-text"class="overlay-text">
+    <span class="overlay-text__last">GAME OVER</span>
+    <button class="overlay-text__btn">Restart</button>
+  </div>
+  <div id="victory-game-text" class="overlay-text">
+    <span class="overlay-text__last">VITÓRIA</span>
+    <button class="overlay-text__btn">Restart</button>
+  </div>
+  <div id="score-game-text" class="overlay-text">
+    <ul class="score-list">
+      <li class="score-list__item score-list__item--podium">
+        <div class="score-list__place score-list__place--first">
+          <img src="./images/first.svg" alt="first-place" class="img__place">
+          <span class="score-list__nick"></span>
+          <span class="score-list__points"></span>
+        </div>
+        <div class="score-list__place score-list__place--second">
+          <img src="./images/second.svg" alt="second-place" class="img__place">
+          <span class="score-list__nick"></span>
+          <span class="score-list__points"></span>
+        </div>
+        <div class="score-list__place score-list__place--third">
+          <img src="./images/thrid.svg" alt="third-place" class="img__place">
+          <span class="score-list__nick"></span>
+          <span class="score-list__points"></span>
+        </div>
+      </li>
+    </ul>
+    <button class="back-to-game-btn">Volte ao jogo</button>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 25%;
+    margin-bottom: 40px;
+    font-family: $font-family, serif;
+    color: $font-color;
+
+    &__title {
+        text-align: center;
+        font-size: $font-size-header;
+        margin-bottom: 10px;
+    }
+
+    &__game-info {
+        display: flex;
+        justify-content: space-around;
+        font-size: $font-size-info;
+        margin-top: 10px;
+    }
+    @media (max-width: 640px) {
+        &__game-info{
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+    @media (max-width: 640px) {
+        .game-info {
+           margin-top: 10px;
+        }
+    }
+
+.game-options {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 10px 0;
+}
+
+.btn{
+    cursor: pointer;
+    margin: 10px 15px 10px 15px;
+    &__img{
+        width: 45px;
+        height: 45px;
+    }
+}
+
